@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="Jquery functions ">
+	<title>Jquery Functions</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('#bt_click').click(function(){
+				alert('clicked!');
+			});
+			$('#bt_hide').click(function(){
+				$('div.form_box').hide();
+			});
+			$('#bt_show').click(function(){
+				$('div.form_box').show();
+			});
+			$('#bt_toggle').click(function(){
+				$('h1').toggle('div.form_box');
+			});
+			$('#bt_s_up').click(function(){
+				$('div.form_box').slideUp();
+			});
+			$('#bt_s_down').click(function(){
+				$('div.form_box').slideDown();
+			});
+			$('#bt_s_toggle').click(function(){
+				$('div.form_box').slideToggle();
+			});
+			$('#bt_f_out').click(function(){
+				$('div.form_box').fadeOut();
+			});
+			$('#bt_f_in').click(function(){
+				$('div.form_box').fadeIn();
+			});
+			$('#bt_add').click(function(){
+				alert('watch the form\'s border color');
+				$('div.form_box').addClass('add_this');
+			});
+			$('#bt_before').click(function(){
+				alert('watch the title \'JQuery functions title\'');
+				$('h1').before('Hi I\'m BEFORE');
+			});
+			$('#bt_after').click(function(){
+				alert('watch the email field');
+				$('.form_box input[type=email]').after('Hi I\'m AFTER');
+			});
+			$('#bt_append').click(function(){
+				$('p').append(' and programmers');
+			});
+			$('#bt_html').click(function(){
+				alert('Watch the \'Please enter your details text and labels\'');
+				$('h2, label').html('JQuery is fun');
+			});
+			
+			$('#bt_attr').click(function(){
+				$('img').attr('width','250');
+			});
+			$('#bt_val').click(function(){
+				$('.form_box input[type=email]').val('developer@gmail.com');
+			});
+			$('#bt_text').click(function(){
+				alert('This is the Text function');
+				$('h2').text('Jquery is super fun!');
+			});
+		});
+	</script>
+</head>
+	<body>
+		<div class="wrapper">
+			<h1>JQuery functions</h1>
+			<p>for web developers</p>
+			<section>Web development</section>
+			<article>Powered by Javascript</article>
+			<div class="main_content">
+				<div class="form_box">
+					<h2>Please enter your Details</h2>
+					<form action="action.php">
+						<label for="fname">First Name</label>
+						<input type="text" name="fname" id="fname">
+						<label for="lname">Last name</label>
+						<input type="text" name="lname" id="lname">
+						<label for="email">Email</label>
+						<input type="email" id="email" placeholder="Enter your email">
+					</form>
+				</div>
+				<img src="daftpunk.gif" alt="daftpunk" width="150" height="150">
+				<div class="demo">
+					<button id="bt_click">Click</button>
+					<button id="bt_hide">Hide</button>
+					<button id="bt_show">Show</button>
+					<button id="bt_toggle">Toggle</button>
+					<button id="bt_s_up">Slide Up</button>
+					<button id="bt_s_down">Slide Down</button>
+					<button id="bt_s_toggle">Slide Toggle</button>
+					<button id="bt_f_out">Fade Out</button>
+					<button id="bt_f_in">Fade In</button>
+					<button id="bt_add">Add Class</button>
+					<button id="bt_before">Before</button>
+					<button id="bt_after">After</button>
+					<button id="bt_append">Append</button>
+					<button id="bt_html">HTML</button>
+					<button id="bt_attr">Attr</button>
+					<button id="bt_val">Val</button>
+					<button id="bt_text">Text</button>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
